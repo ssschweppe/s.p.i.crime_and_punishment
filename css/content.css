@@ -1,0 +1,358 @@
+body {
+    background: black;
+}
+
+h1 {
+    font-family: 'Gergel';
+    font-size: 8.89vw;
+    color: white;
+    text-align: center;
+    margin-top: 5.56vw;
+}
+
+p {
+    font-family: "Gergel";
+    color: white;
+    font-size: 4.03vw;
+}
+
+.crone_house1 {
+    position: relative;
+}
+
+.crone_house img {
+    width: 40vw;
+}
+
+.crone_house {
+    display: flex;
+    margin-top: 30.9vw;
+}
+
+.crone_house p {
+    padding-top: 51.6vw;
+    padding-left: 2.78vw;
+}
+
+.star_crone1 {
+    width: 9.31vw;
+    position: absolute;
+    top: 5.21vw;
+    left: 61.11vw;
+}
+
+.star_crone2 {
+    width: 20vw;
+    position: absolute;
+    top: 5.63vw;
+    left: 70.83vw;
+}
+
+.pub_house {
+    position: relative;
+    margin-top: 3.33vw;
+}
+
+.pub_and_name {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10.76vw;
+}
+
+.pub_and_name img {
+    width: 40vw;
+}
+
+.pub_and_name p {
+    margin-bottom: 0.69vw;
+}
+
+.arrow1 {
+    position: absolute;
+    width: 61.39vw;
+    left: 19vw;
+}
+
+.star_and_pub {
+    margin-left: 7.15vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.star_pub {
+    width: 12.85vw;
+}
+
+.raskolnikov_house {
+    display: flex;
+    width: 24.31vw;
+}
+
+.raskolnikov_house img  {
+    width: 20vw;
+    align-self: flex-start;
+}
+
+.raskolnikov_house p {
+    transform: rotate(90deg);
+    transform-origin: 30px 35px;
+    text-wrap: nowrap;
+}
+
+.raskolnikov_and_crone_house {
+    position: relative;
+    display: flex;
+}
+
+.arrow2 {
+    position: absolute;
+    width: 73.82vw;
+    left: 8.68vw;
+    top: 4.03vw;
+}
+
+.crone_house2 {
+    display: flex;
+    flex-direction: column;
+    margin: 19.44vw 0 0 14.58vw ;
+}
+
+.crone_house2 img {
+    width: 40vw;
+}
+
+.crone_house2 p {
+    padding-left: 26.2vw;
+}
+
+.grilles img {
+    width: 9.17vw;
+}
+
+.img_raskolnikov {
+    width: 6.2vw;
+}
+
+.img_crone {
+    width: 8vw;
+}
+
+.grilles, .figures {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 21.18vw;
+    left: 42.2vw;
+    top: 24.6vw;
+}
+
+.figures {
+    align-items: end;
+    top: 25.2vw;
+    width: 18vw;
+}
+
+.star_raskolnikov1, .star_raskolnikov2 {
+    position: absolute;
+    width: 10.14vw;
+    top: 33.33vw;
+    left: 84.93vw;
+}
+
+.star_raskolnikov2 {
+    width: 6.67vw;
+    top: 51.88vw;
+    left: 89.93vw;
+}
+
+.arrow3 {
+    position: absolute;
+    width: 54.03vw;
+    top: 45vw;
+    left: 6.5vw;
+}
+
+.police_house {
+    position: relative;
+    margin-top: 13.89vw;
+}
+
+.police_and_name, .sonya_and_name {
+    display: flex;
+    flex-direction: column;
+}
+
+.police_and_name img {
+    width: 60vw;
+}
+
+.police_and_name p {
+    padding: 0 0 0.2vw 21.88vw;
+}
+
+.star_police {
+    position: absolute;
+    width: 10.14vw;
+    top: 100.49vw;
+    left: 7.15vw;
+}
+
+.arrow4 {
+    position: absolute;
+    width: 44.58vw;
+    left: 27.22vw;
+    top: -10vw;
+}
+
+.sonya_house {
+    position: relative;
+    margin-top: 16.94vw;
+}
+
+.sonya_and_name img {
+    width: 60vw;
+    align-self: flex-end;
+}
+
+.sonya_and_name p {
+    padding-left: 44.51vw;
+}
+
+.star_sonya1, .star_sonya2 {
+    position: absolute;
+    width: 11.25vw;
+    top: 13.5vw;
+    left: 5.07vw;
+}
+
+.star_sonya2 {
+    top: 24.28vw;
+    left: 15.14vw;
+}
+
+.arrow5 {
+    position: absolute;
+    width: 46.67vw;
+    top: 49.72vw;
+    left: 23.96vw;
+}
+
+.police_house2 {
+    position: relative;
+    margin-top: 32.43vw;
+}
+
+.police_and_name2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.police2 {
+    width: 60vw;
+}
+
+.arrow6 {
+    position: absolute;
+    width: 40.97vw;
+    top: 30.17vw;
+    left: 47.78vw;
+}
+
+.star_police2 {
+    position: absolute;
+    width: 15.07vw;
+    top: 59.03vw;
+    left: 81.6vw;
+}
+
+.popup_clock {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box {
+    width: 6.94vw;
+    height: 6.94vw;
+
+}
+
+.boxes {
+    position: absolute;
+    display: flex;
+    top: 13.06vw;
+    left: 24.03vw;
+}
+
+.box1 {
+    margin-top: 8.75vw;
+}
+
+.box2 {
+    margin-left: 9.58vw;
+}
+
+.box3 {
+    margin-left: -10.47vw;
+    margin-top: 21.53vw;
+}
+
+.gears {
+    position: absolute;
+    cursor: grab;
+}
+
+.gear_blue {
+    width: 26.04vw;
+    top: 15.97vw;
+    left: 43.19vw;
+}
+
+.gear_purple {
+    width: 14.31vw;
+    top: 28.75vw;
+    left: 9.44vw;
+    rotate: -5.2deg;
+}
+
+.gear_yellow {
+    width: 12.08vw;
+    top: 5.97vw;
+    left: 4.1vw;
+}
+
+.clock_background {
+    width: 71.39vw;
+}
+
+.popup_dialogue_pub{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dialogue_pub_text {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 42.7vw;
+    left: 1.39vw;
+    width: 66.53vw;
+}
+
+.dialogue_pub_text p {
+    font-size: 2.78vw;
+}
+
+.dialogue_pub_text img {
+    width: 4.51vw;
+}
+
+.dialogue_pub_background {
+    width: 69.1vw;
+}
