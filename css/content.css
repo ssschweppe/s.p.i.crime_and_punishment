@@ -147,8 +147,9 @@ p {
 }
 
 .figures {
+    display: none;
     align-items: end;
-    top: 25.2vw;
+    top: 25vw;
     width: 18vw;
 }
 
@@ -274,7 +275,19 @@ p {
     transform: translate(-50%, -50%);
 }
 
+.btn {
+    background-color: #E61EAA;
+    color: white;
+    width: 20.83vw;
+    height: 5.9vw;
+    border-radius: 0;
+    border: 0;
+    font-family: 'Gergel';
+    font-size: 4.03vw;
+}
+
 .box {
+    position: relative;
     width: 6.94vw;
     height: 6.94vw;
 
@@ -296,7 +309,7 @@ p {
 }
 
 .box3 {
-    margin-left: -10.47vw;
+    margin-left: -11.47vw;
     margin-top: 21.53vw;
 }
 
@@ -315,7 +328,7 @@ p {
     width: 14.31vw;
     top: 28.75vw;
     left: 9.44vw;
-    rotate: -5.2deg;
+    rotate: 2deg;
 }
 
 .gear_yellow {
@@ -328,7 +341,7 @@ p {
     width: 71.39vw;
 }
 
-.popup_dialogue_pub{
+.popup_dialogue_pub, .popup_dialogue_police {
     display: none;
     position: fixed;
     top: 50%;
@@ -336,23 +349,120 @@ p {
     transform: translate(-50%, -50%);
 }
 
-.dialogue_pub_text {
+.dialogue_pub_text, .dialogue_police_text {
+    height: 5.49vw;
     position: absolute;
     display: flex;
     justify-content: space-between;
-    top: 42.7vw;
+    align-items: center;
+    top: 41.4vw;
     left: 1.39vw;
     width: 66.53vw;
 }
 
-.dialogue_pub_text p {
+.dialogue_pub_text p, .dialogue_police_text p {
     font-size: 2.78vw;
 }
 
-.dialogue_pub_text img {
-    width: 4.51vw;
+.dialogue_pub_text img, .dialogue_police_text img {
+    width: 3.1vw;
 }
 
-.dialogue_pub_background {
+.dialogue_pub_background, .dialogue_police_background {
     width: 69.1vw;
+}
+
+.popup_pub_raskolnikov {
+    display: none;
+}
+
+.popup_loop {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loop_background {
+    width: 62.5vw;
+}
+
+.loop {
+    cursor: grab;
+    position: absolute;
+    top: 20.83vw;
+    left: 10.42vw;
+    width: 5.94vw;
+}
+
+.box_for_loop  {
+    width: 6.94vw;
+    height: 6.94vw;
+    position: absolute;
+    top: 20vw;
+    left: 34.7vw;   
+}
+
+.popup_drawing {
+    width: 90%;
+    height: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    mask-image: url('../img/drawing_area.svg');
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+
+}
+
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) ;
+    }
+}
+
+@keyframes rotate_reverse {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg) ;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    } 
+}
+
+@keyframes opacity_reverse {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(3vw, 0);
+    }
 }
