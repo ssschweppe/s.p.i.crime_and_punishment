@@ -176,57 +176,57 @@ document.addEventListener("DOMContentLoaded", function(){
 
     sonyaHouse.addEventListener('click', () => {
         popupDrawing.style.display = 'block';
+        const canvas = document.querySelector('.canvas');
+        const ctx = canvas.getContext('2d');
+    
+        const baseWidth = 800;
+        const baseHeight = 300; 
+    
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            const containerWidth = container.clientWidth;
+    
+            canvas.width = containerWidth;
+            canvas.height = (containerWidth * baseHeight) / baseWidth;
+    
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        };
+    
+        resizeCanvas();
+    
+        window.addEventListener('resize', resizeCanvas);
+    
+    
+        let isDrawing = false; 
+    
+        ctx.lineWidth = 10; 
+        ctx.lineCap = 'round'; 
+        ctx.strokeStyle = 'white'; 
+    
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            ctx.beginPath();
+            ctx.moveTo(e.offsetX, e.offsetY);
+            console.log('Mouse coordinates:', e.offsetX, e.offsetY); 
+        });
+    
+        canvas.addEventListener('mousemove', (e) => {
+            if (isDrawing) {
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke(); 
+            }
+        });
+    
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+            ctx.closePath();
+        });
+    
     });
 
     const drawingButton = document.querySelector('.btn2');
     drawingButton.addEventListener('click', () => {
         popupDrawing.style.display = 'none';
-    });
-
-    const canvas = document.querySelector('.canvas');
-    const ctx = canvas.getContext('2d');
-
-    const baseWidth = 800;
-    const baseHeight = 300; 
-
-    function resizeCanvas() {
-        const container = canvas.parentElement;
-        const containerWidth = container.clientWidth;
-
-        canvas.width = containerWidth;
-        canvas.height = (containerWidth * baseHeight) / baseWidth;
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }
-
-    resizeCanvas();
-
-    window.addEventListener('resize', resizeCanvas);
-
-
-    let isDrawing = false; 
-
-    ctx.lineWidth = 10; 
-    ctx.lineCap = 'round'; 
-    ctx.strokeStyle = 'white'; 
-
-    canvas.addEventListener('mousedown', (e) => {
-        isDrawing = true;
-        ctx.beginPath();
-        ctx.moveTo(e.offsetX, e.offsetY);
-        console.log('Mouse coordinates:', e.offsetX, e.offsetY); 
-    });
-
-    canvas.addEventListener('mousemove', (e) => {
-        if (isDrawing) {
-            ctx.lineTo(e.offsetX, e.offsetY);
-            ctx.stroke(); 
-        }
-    });
-
-    canvas.addEventListener('mouseup', () => {
-        isDrawing = false;
-        ctx.closePath();
     });
     
 });
